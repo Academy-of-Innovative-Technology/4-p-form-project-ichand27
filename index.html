@@ -25,12 +25,47 @@
             <option value="other">Other</option>
         </select>
 
+        <label for="symptoms">Symptoms:</label>
+        <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+
+        <fieldset>
+            <legend>Medical History:</legend>
+            <label for="history">Please provide details of any relevant medical history:</label>
+            <textarea id="history" name="history" rows="4"></textarea>
+            <label for="medications">Current Medications:</label>
+           <textarea id="medications" name="medications" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Risk Assessment:</legend>
+            <label for="risk">Please assess the risk of harm to self or others </label>
+            <svg class="question-icon" viewBox="0 0 100 100" width="30" height="15">
+            <circle cx="50" cy="50" r="45" stroke="#444" stroke-width="10" fill="none" />
+         <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-size="50" font-family="Arial" fill="#444">?</text>
+  </svg>            <p class="riskInquiryTxt"> A psychiatric risk assessment evaluates a patient’s risk to self (suicide, self-harm, neglect) and others (violence, exploitation) by analyzing history, current mental state, and intent. It uses interviews, standardized tools, and dynamic, time-sensitive review to identify protective factors and guide treatment planning. 
+Key Components of Risk Assessment
+Risk to Self: Assessment of suicidal ideation, intent, planning, preparation, and history of self-harm.
+Risk to Others: Evaluation of violent history, threats, delusions, hallucinations, or impulsive behavior.
+Vulnerability & Self-Neglect: Assessing for exploitation by others, lack of basic needs, or severe neglect of health/safety.
+Contextual Factors: Reviewing substance abuse, medication compliance, social isolation, and living conditions.
+Protective Factors: Identifying coping skills, support systems, and reasons to live.</p>
+            <textarea id="risk" name="risk" rows="4"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="contact">Emergency Contact Name:</label>
+            <input type="text" id="contact" name="contact">
+            <label for="contactPhone">Emergency Contact Phone:</label>  
+            <input type="tel" id="contactPhone" name="contactPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            <label for="contactRelation">Relationship to Emergency Contact:</label>
+            <input type="text" id="contactRelation" name="contactRelation" placeholder="e.g., Parent, Sibling, Friend">
+        </fieldset>
 
 
+        <button type="submit">Submit</button>
 
-
-
-
+    </form>
 
 
     <footer>
@@ -40,4 +75,3 @@
 <script src="script.js"></script>
 
 </body>
-

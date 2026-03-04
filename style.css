@@ -1,1 +1,58 @@
 
+  .riskInquiryTxt {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: sans-serif;
+    font-size: 14px;
+    fill: black;
+  }
+
+  .riskInquiry:hover .riskInquiryTxt:hover {
+    opacity: 1;
+  }
+  
+.svgInquiry{
+    cursor: pointer;
+  }
+
+  .help-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.question-icon {
+  display: block;
+}
+
+.tooltip-text {
+  /* Hides the text initially and removes its space */
+  visibility: hidden;
+  opacity: 0;
+  
+  /* Styling for the popup */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  
+  /* Positioning the popup */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* Smooth transition */
+  transition: opacity 0.3s;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Make tooltip appear on hover */
+.help-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
