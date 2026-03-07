@@ -1,58 +1,160 @@
-
-  .riskInquiryTxt {
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-family: sans-serif;
-    font-size: 14px;
-    fill: black;
-  }
-
-  .riskInquiry:hover .riskInquiryTxt:hover {
-    opacity: 1;
-  }
-  
-.svgInquiry{
-    cursor: pointer;
-  }
-
-  .help-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: help;
+body{
+background:black;
+color:white;
+font-family:'Special Elite', monospace;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
 }
 
-.question-icon {
-  display: block;
+h1{
+font-family:'Creepster', cursive;
+color:#8b0000;
+text-align:center;
+font-size:40px;
+letter-spacing:2px;
 }
 
-.tooltip-text {
-  /* Hides the text initially and removes its space */
-  visibility: hidden;
-  opacity: 0;
-  
-  /* Styling for the popup */
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  
-  /* Positioning the popup */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Position above the icon */
-  left: 50%;
-  transform: translateX(-50%);
-  
-  /* Smooth transition */
-  transition: opacity 0.3s;
-  white-space: nowrap; /* Prevents text wrapping */
+form{
+background:#111;
+padding:30px;
+border:2px solid darkred;
+width:420px;
+box-shadow:0 0 25px red;
+z-index:2;
+position:relative;
 }
 
-/* Make tooltip appear on hover */
-.help-wrapper:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+label{
+display:block;
+margin-top:12px;
 }
 
+input, textarea, select{
+width:100%;
+padding:8px;
+margin-top:4px;
+background:#222;
+color:white;
+border:1px solid #550000;
+font-family:'Special Elite', monospace;
+}
+
+fieldset{
+margin-top:18px;
+border:1px solid darkred;
+padding:10px;
+}
+
+legend{
+color:#ff4444;
+}
+
+input[type="submit"]{
+background:#550000;
+border:none;
+margin-top:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+input[type="submit"]:hover{
+transform:rotate(-2deg) scale(1.05);
+background:red;
+}
+
+input:hover, textarea:hover, select:hover{
+animation:shake .2s infinite;
+}
+
+@keyframes shake{
+0%{transform:translateX(0)}
+25%{transform:translateX(-1px)}
+50%{transform:translateX(1px)}
+75%{transform:translateX(-1px)}
+100%{transform:translateX(0)}
+}
+
+.blood-overlay{
+position:fixed;
+
+
+bottom: 506px;
+
+width:100%;
+height:auto;
+
+z-index:999;
+
+pointer-events:none;
+
+display:block;
+}
+
+@keyframes drip{
+0%{transform:translateY(-5px)}
+50%{transform:translateY(5px)}
+100%{transform:translateY(-5px)}
+}
+
+.hidden{
+display:none;
+}
+
+#overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+z-index:999;
+display:none;
+}
+
+#overlay.active{
+display:flex;
+}
+
+.panel{
+background:#111;
+border:2px solid darkred;
+padding:40px;
+text-align:center;
+width:400px;
+box-shadow:0 0 25px red;
+font-family:'Special Elite', monospace;
+animation:fadeIn 1s;
+}
+
+.panel h2{
+font-family:'Creepster', cursive;
+color:red;
+font-size:36px;
+margin-bottom:15px;
+}
+
+.panel button{
+margin-top:15px;
+padding:10px 20px;
+background:#550000;
+color:white;
+border:none;
+cursor:pointer;
+font-family:'Special Elite', monospace;
+}
+
+.panel button:hover{
+background:red;
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:scale(.8)}
+to{opacity:1; transform:scale(1)}
+}
