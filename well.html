@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wellness Check Form</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9ff, #e6ecff);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    width:380px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    animation:fadeIn .8s ease;
+}
+
+h1{
+    text-align:center;
+    font-weight:600;
+    color:#4a4a8a;
+}
+
+p{
+    text-align:center;
+    font-size:14px;
+    color:#777;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-size:14px;
+    color:#555;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-family:'Poppins', sans-serif;
+    transition:.2s;
+}
+
+input:focus, select:focus, textarea:focus{
+    outline:none;
+    border-color:#7a8cff;
+    box-shadow:0 0 5px rgba(122,140,255,0.3);
+}
+
+fieldset{
+    margin-top:18px;
+    border:none;
+    background:#f5f7ff;
+    padding:12px;
+    border-radius:10px;
+}
+
+legend{
+    font-size:13px;
+    color:#6a6ad1;
+    font-weight:500;
+}
+
+.option{
+    margin-top:8px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#7a8cff;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#5f6ee6;
+    transform:translateY(-2px);
+}
+
+#thankYou{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+    color:#4a4a8a;
+    font-weight:500;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px)}
+    to{opacity:1; transform:translateY(0)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Wellness Check</h1>
+<p>Take a moment to check in with yourself 🌿</p>
+
+<form id="form">
+
+<label>Name</label>
+<input type="text" id="name" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Age</label>
+<input type="number" min="1" max="120" required>
+
+<label>Mood Today</label>
+<select required>
+<option value="">Select</option>
+<option>Happy</option>
+<option>Okay</option>
+<option>Stressed</option>
+<option>Tired</option>
+</select>
+
+<fieldset>
+<legend>What are you feeling</legend>
+
+<div class="option">
+<input type="checkbox"> Calm
+</div>
+
+<div class="option">
+<input type="checkbox"> Anxious
+</div>
+
+<div class="option">
+<input type="checkbox"> Motivated
+</div>
+
+<div class="option">
+<input type="checkbox"> Overwhelmed
+</div>
+
+</fieldset>
+
+<label>Write anything on your mind</label>
+<textarea rows="3"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<div id="thankYou"></div>
+
+</div>
+
+<script>
+
+const form = document.getElementById("form");
+const thankYou = document.getElementById("thankYou");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    thankYou.style.display = "block";
+    thankYou.innerText = "Thank you " + name + ", take care of yourself today 💙";
+
+    form.style.display = "none";
+});
+
+</script>
+
+</body>
+</html>

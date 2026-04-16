@@ -1,0 +1,138 @@
+/* Base page styling */
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #00b4b4, #6fd3ff);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+/* Keyframe for background animation */
+@keyframes bgMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Panel for opening screen */
+.panel{
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:420px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:fadeIn 1s ease;
+}
+
+.panel h1{
+    color:#00b4b4;
+    font-size:2em;
+}
+
+.panel p{
+    color:#777;
+    font-size:1.2em;
+}
+
+/* Start button for panel */
+#startButton{
+    background-color:#00b4b4;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:background-color 0.3s ease;
+}
+
+/* Button hover effect */
+#startButton:hover{
+    background-color:#008c8c;
+    transform:scale(1.05);
+}
+
+/* Main form container */
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:420px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    display:none; /* Hidden initially */
+    animation:fadeIn 1s ease;
+}
+
+/* Title styling */
+h1{
+    text-align:center;
+    color:#008c8c;
+}
+
+/* Labels */
+label{
+    display:block;
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* Inputs, selects, textareas */
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    transition:.2s;
+}
+
+/* Focus effect (important for UX) */
+input:focus, select:focus, textarea:focus{
+    outline:none;
+    border-color:#00b4b4;
+    box-shadow:0 0 5px rgba(0,180,180,0.4);
+}
+
+/* Section box */
+fieldset{
+    margin-top:15px;
+    border:1px solid #00b4b4;
+    border-radius:10px;
+    padding:10px;
+}
+
+/* Legend title */
+legend{
+    color:#008c8c;
+    font-weight:500;
+}
+
+/* Submit button */
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#00b4b4;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+/* Hover animation */
+button:hover{
+    background:#008c8c;
+    transform:scale(1.03);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px)}
+    to{opacity:1; transform:translateY(0)}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AoIT Expo Check In</title>
+
+<!-- Link to external CSS file -->
+<link rel="stylesheet" href="expo.css">
+
+<!-- Google Font for clean modern look -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Opening Panel -->
+<div id="welcomePanel" class="panel">
+    <h1>Welcome to the AoIT Expo!</h1>
+    <p>Are you ready to start your check-in?</p>
+    <button id="startButton">Let's Start</button>
+</div>
+
+<!-- Form Section (hidden initially) -->
+<div class="container" id="checkInForm">
+    <h1>AoIT Expo Check In</h1>
+    <p>Welcome to the Academy of Innovative Technology</p>
+    <p>Nice to meet you. We are glad you are here.</p>
+
+    <form id="expoForm">
+        <!-- Name input -->
+        <label>Your Name</label>
+        <input type="text" id="name" required>
+
+        <!-- Email input -->
+        <label>Email</label>
+        <input type="email" required>
+
+        <!-- Role or organization -->
+        <label>Role or Organization</label>
+        <input type="text" placeholder="Student, Teacher, Company, etc" required>
+
+        <!-- Excitement question -->
+        <label>Are you excited to be here?</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Yes</option>
+            <option>Very excited</option>
+            <option>A little</option>
+        </select>
+
+        <!-- Keep in contact -->
+        <label>Would you like us to keep in contact?</label>
+        <select>
+            <option>No</option>
+            <option>Yes</option>
+        </select>
+
+        <!-- Interest section -->
+        <fieldset>
+            <legend>What are you most excited to see?</legend>
+            <label><input type="checkbox"> IT and Cyber Security</label>
+            <label><input type="checkbox"> Web Design</label>
+            <label><input type="checkbox"> Robotics</label>
+            <label><input type="checkbox"> Game Design</label>
+            <label><input type="checkbox"> Career and Finance</label>
+            <label><input type="checkbox"> Music Technology</label>
+
+            <!-- Other option -->
+            <label>Other</label>
+            <input type="text" placeholder="Type here">
+        </fieldset>
+
+        <!-- Networking question -->
+        <label>What are you hoping to gain from this expo?</label>
+        <textarea rows="3"></textarea>
+
+        <!-- Collaboration question -->
+        <label>Would you like to collaborate or work with AoIT?</label>
+        <textarea rows="3"></textarea>
+
+        <!-- Feedback -->
+        <label>How can we improve our expo?</label>
+        <textarea rows="3"></textarea>
+
+        <button type="submit">Check In</button>
+    </form>
+</div>
+
+<!-- Link to JS file -->
+<script src="expo.js"></script>
+
+</body>
+</html>
